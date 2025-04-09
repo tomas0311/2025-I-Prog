@@ -7,8 +7,11 @@ int main(void) {
     std::cin >> guessed_number;
     if (guessed_number == NUM) {
         std::cout << "GANASTE!!!!!!!!!!!!!\n";
-    } else {
-        std::cout << "no ganaste, intentalo de nuevo\n";
+    } else if (guessed_number > NUM) {
+        std::cout << "Te pasaste.\n";
+    }
+        else {// es menor
+         std::cout << "Te falto.\n";
     }
 
     return 0;
