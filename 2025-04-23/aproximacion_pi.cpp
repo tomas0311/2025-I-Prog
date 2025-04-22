@@ -4,15 +4,20 @@ double pi_aprox (int iteraciones) ;
 int main(void) {
     std::cout.precision(16);
     std::cout.setf(std::ios::scientific);
-    std::cout <<  pi_aprox(5) << "\n";
+    for (int n = 0 ; n <= 20 ; n++) {
+        double pi_error = std::abs(1 - pi_aprox(n)/M_PI);
+
+        std::cout <<  n <<  "  |  " << pi_aprox(n) << "  |  " << pi_error << "\n";
+        
+    }
 
     return 0;
 }
 double pi_aprox (int iteraciones) {
     double n_termino = 0 ;
     
-    for ( int n = 0 ; n < iteraciones ; n++){
-          double nf_termino = (1/(std::pow (16,n))) * (4.0/(8*n + 1) - 2.0/(8*n + 4) - 1.0/(8*n + 5) - 1.0/(8*n + 6)) ;
+    for ( int k = 0 ; k < iteraciones ; k++){
+          double nf_termino = (1/(std::pow (16,k))) * (4.0/(8*k + 1) - 2.0/(8*k + 4) - 1.0/(8*k + 5) - 1.0/(8*k + 6)) ;
          n_termino = n_termino + nf_termino ;
          
     }
