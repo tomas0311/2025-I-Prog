@@ -8,7 +8,6 @@ int main(void) {
     std::cout << std::setw(4) << "n" << "  |  " << std::setw(25) << "Pi calculado" <<  "  |  " << std::setw(20) << "Error" << "\n";
     for (int n = 1 ; n <= 20 ; n++) {
         double pi_error = std::abs(1 - pi_aprox(n)/M_PI);
-
         std::cout << std::setw(4) << n << "  |  " << std::setw(25) << pi_aprox(n) <<  "  |  " << std::setw(20) << pi_error << "\n";
         
     }
