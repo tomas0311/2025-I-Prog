@@ -1,11 +1,16 @@
 #include <iostream>
 #include <cmath>
 #include <string>
-bool isprime (long n);
 int fibonacci (int k);
+int sum(int n);
 int main(int argc, char **argv){
     int num = std::stoi(argv[1]);
-    std::cout << fibonacci(num) << "\n";
+    if (num < 2){
+        std::cout << "Numero fuera de rango:" << num << "\n";
+    }
+    else {
+        std::cout << sum(num) << "\n";
+    }    
 }
 int fibonacci (int k){
     if (k == 1){
@@ -25,3 +30,13 @@ int fibonacci (int k){
     }
     return n_b;
 }
+int sum (int n){
+    int suma = 0;
+    for ( int ii = 1; fibonacci(ii) <= n ; ii++){
+        if(fibonacci(ii)%2 != 0){
+            suma += fibonacci(ii);
+        }
+    }
+    return suma;
+}
+    
