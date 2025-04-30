@@ -15,7 +15,8 @@ int main(int argc, char **argv){
 
     }
   std::cout  << sum << "\n";
-
+  
+  return 0;
 }
 
 bool isprime (long n){
