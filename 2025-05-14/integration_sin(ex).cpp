@@ -21,7 +21,7 @@ int main(void) {
     double ERR_TRAP = std::abs(1 - trapezoid(-5, 5, ii , f) / I_EXACTA) ;
     double ERR_SIMP = std::abs(1 - simpson(-5, 5, ii , f) / I_EXACTA) ;
     double ERR_TRAP_RICH = std::abs(1 - integration_richardson(f , trapezoid , -5 , 5 , ii , 2) / I_EXACTA) ;
-    double ERR_SIMP_RICH = std::abs(1 - integration_richardson(f , simpson , -5 , 5 , ii , 2) / I_EXACTA) ;
+    double ERR_SIMP_RICH = std::abs(1 - integration_richardson(f , simpson , -5 , 5 , ii ,4) / I_EXACTA) ;
     file << ii << " "
          <<  ERR_TRAP << " "
          <<  ERR_SIMP << " "
